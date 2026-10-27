@@ -44,7 +44,7 @@ def foot():
 <p class="hand mt">Once a Mahatmite, always a Mahatmite.</p></div>
 <div><h4>Explore</h4><ul>{''.join(f'<li><a href="{u}">{n}</a></li>' for u,n in PAGES)}</ul></div>
 <div><h4>Get involved</h4><ul><li><a href="{REG}">Register for Homecoming</a></li><li><a href="join.html#raise">Put your hand up</a></li><li><a href="programmes.html">All programmes</a></li><li><a href="homecoming.html#faq">FAQ</a></li></ul></div>
-<div><h4>Say hello</h4><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="#" data-todo="Instagram">Instagram</a></li><li><a href="#" data-todo="YouTube">YouTube</a></li><li><a href="#" data-todo="LinkedIn">LinkedIn</a></li></ul>
+<div><h4>Say hello</h4><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="#" data-todo="Instagram">Instagram</a></li><li><a href="#" data-todo="YouTube">YouTube</a></li><li><a href="#" data-todo="LinkedIn">LinkedIn</a></li><li><a href="#" data-todo="Facebook">Facebook</a></li></ul>
 <p class="mt"><button class="bell" id="bell" type="button">{BELL} Ring the bell</button></p></div>
 </div>
 <div class="fine"><span>© <span id="yr">2026</span> Mahatma Alumni Association. Independent and run by alumni.</span><span>Made with chalk dust and nostalgia.</span></div>
@@ -340,6 +340,16 @@ h+=f'''
 <div class="tile light rv"><h3>Resources</h3><ul><li>Skills and time on tap</li><li>Funds for projects, tracked openly</li><li>CSR support from alumni companies</li></ul></div>
 <div class="tile light rv"><h3>Standing</h3><ul><li>Alumni who stay connected and proud</li><li>Stories of where graduates went</li><li>Eight schools working as one family</li></ul></div></div>
 <p class="mt2 hand center">What the school gives: a point of contact, permission for visits, and child-safety rules that every programme follows.</p></div></section>
+
+<section id="impact"><div class="wrap"><div class="head"><div><p class="eyebrow">Social impact</p><h2>Causes we want to take up together</h2></div><p>Beyond the school gates: the community work alumni have asked for. Each one runs through <a href="programmes.html#csr">CSR and community</a>, with open accounts.</p></div>
+<div class="cards3">
+<div class="tile light rv"><h3>Environment</h3><ul><li>Tree plantation drives, wherever alumni live</li><li>Clean Madurai and regular neighbourhood clean-ups</li></ul></div>
+<div class="tile light rv"><h3>Education</h3><ul><li>Rural education outreach</li><li>Life-skills sessions for students</li></ul></div>
+<div class="tile light rv"><h3>Healthcare</h3><ul><li>Medical camps</li><li>Eye camps</li></ul></div>
+<div class="tile light rv"><h3>Community welfare</h3><ul><li>Support for the elderly</li><li>Support for people who are physically challenged</li><li>Festival support, such as at Diwali</li></ul></div>
+<div class="tile light rv"><h3>Organ donation</h3><ul><li>Awareness among alumni and families</li><li>A pledge drive at Homecoming 2026</li></ul></div>
+<div class="tile light rv"><h3>Volunteering</h3><ul><li>Alumni give time and skills on the ground</li><li><a href="join.html#raise">Put your hand up</a></li></ul></div></div>
+<p class="mt2 hand center">These are proposals until the council confirms them.</p></div></section>
 
 <section class="feature"><div class="wrap"><div class="head"><div><p class="eyebrow">The first six months</p><h2>From one day to a year-round network</h2></div></div>{roadmap()}</div></section>
 {HAND}
