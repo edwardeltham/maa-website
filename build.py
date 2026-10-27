@@ -47,7 +47,7 @@ def foot():
 <div><h4>Say hello</h4><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="#" data-todo="Instagram">Instagram</a></li><li><a href="#" data-todo="YouTube">YouTube</a></li><li><a href="#" data-todo="LinkedIn">LinkedIn</a></li></ul>
 <p class="mt"><button class="bell" id="bell" type="button">{BELL} Ring the bell</button></p></div>
 </div>
-<div class="fine"><span>© <span id="yr">2026</span> Mahatma Alumni Association. Independent and run by alumni.</span><span>Made with chalk dust and nostalgia.</span></div>
+<div class="fine"><span>© <span id="yr">2026</span> Mahatma Alumni Association. Independent and run by alumni.</span><span>Made with chalk dust and nostalgia. <a href="game.html">Late for school?</a></span></div>
 </div></footer>
 <script src="assets/js/main.js" defer></script>
 </body></html>'''
@@ -232,6 +232,12 @@ h+=f'''
 <div class="head"><div><p class="eyebrow">Memory lane</p><h2>Do you remember this?</h2></div><p>Send us your photos from school days and we will pin them here.</p></div>
 {polas(6)}
 <p class="mt2 center"><a class="btn line" href="mailto:{MAIL}?subject=My%20school%20photo">Send us a photo {ARW}</a></p></div></section>
+
+<section class="chalk"><div class="wrap center">
+<p class="hand" style="color:var(--gold)">Running late again?</p>
+<h2 class="mt">Beat the 8:30 bell</h2>
+<p class="mt">A one-minute game. Race to the school gate past puddles, stray dogs and cows, or say sorry on the dais in front of the whole assembly.</p>
+<p class="mt2"><a class="btn gold" href="game.html">Play Late for school {ARW}</a></p></div></section>
 
 <section class="feature"><div class="wrap">
 <div class="head"><div><p class="eyebrow">From one day to a year-round network</p><h2>The first six months</h2></div><p>A proposed plan. Light programmes start first, heavier ones follow once the team is steady.</p></div>
@@ -427,7 +433,26 @@ h+=f'''
 '''+foot()
 out["join.html"]=h
 
+# GAME
+h=head("Late for school · Mahatma Alumni Association","A little game for Mahatmites: race the 8:30 bell to the school gate, or say sorry on the dais at morning assembly.","game.html")
+h+=f'''
+<section class="gamesec"><div class="wrap">
+<div class="gamehead"><div><p class="eyebrow">Just for fun</p><h1 class="mt">Late for school.</h1></div><p class="lede">8:20 AM. The bell rings at 8:30. You know what happens if you miss it.</p></div>
+<div class="game" id="gameBox" tabindex="-1">
+<canvas id="game" role="img" aria-label="Late for school: a running game. A student runs along a Madurai street to the school gate, jumping over obstacles, before the 8:30 bell."></canvas>
+<div class="g-over" id="gOver" aria-live="polite">
+<p class="hand" id="gKick">Bell rings at 8:30</p>
+<h2 id="gTitle">Late for school</h2>
+<p id="gMsg">You are 1.2 km from the gate. Jump over puddles, stray dogs, cows and runaway cycles. Every stumble costs you time. Miss the bell, and it is the dais, the mic and the whole school watching.</p>
+<div class="g-btns"><button class="btn gold" id="gBtn" type="button">Start running</button><button class="btn line" id="gShare" type="button" hidden>Share</button></div>
+</div></div>
+<p class="g-res" id="gRes"></p>
+<p class="g-help"><b>Tap</b> anywhere on the game, or press <kbd>Space</kbd> or <kbd>↑</kbd>, to jump. Hold for a higher jump.</p>
+</div></section>
+'''+foot().replace('<script src="assets/js/main.js" defer></script>','<script src="assets/js/main.js" defer></script>\n<script src="assets/js/game.js" defer></script>')
+out["game.html"]=h
+
 for k,v in out.items(): open(k,'w').write(v)
 # 404
-open('404.html','w').write(head("Lost? · MAA","Page not found","404.html")+'<section class="pagehead"><div class="wrap center"><p class="hand" style="font-size:2.4rem">Bunking class?</p><h1 style="margin-inline:auto" class="mt">This page is not on the timetable.</h1><p class="mt lede">Let us walk you back to the main gate.</p><p class="mt2"><a class="btn solid" href="index.html">Back to the homepage</a></p></div></section>'+foot())
+open('404.html','w').write(head("Lost? · MAA","Page not found","404.html")+'<section class="pagehead"><div class="wrap center"><p class="hand" style="font-size:2.4rem">Bunking class?</p><h1 style="margin-inline:auto" class="mt">This page is not on the timetable.</h1><p class="mt lede">Let us walk you back to the main gate.</p><p class="mt2"><a class="btn solid" href="index.html">Back to the homepage</a> <a class="btn line" href="game.html">Or race the bell</a></p></div></section>'+foot())
 print("built",len(out)+1,"pages")
