@@ -44,7 +44,7 @@ def foot():
 <p class="hand mt">Once a Mahatmite, always a Mahatmite.</p></div>
 <div><h4>Explore</h4><ul>{''.join(f'<li><a href="{u}">{n}</a></li>' for u,n in PAGES)}</ul></div>
 <div><h4>Get involved</h4><ul><li><a href="{REG}">Register for Homecoming</a></li><li><a href="join.html#raise">Put your hand up</a></li><li><a href="programmes.html">All programmes</a></li><li><a href="homecoming.html#faq">FAQ</a></li></ul></div>
-<div><h4>Say hello</h4><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="#" data-todo="Instagram">Instagram</a></li><li><a href="#" data-todo="YouTube">YouTube</a></li><li><a href="#" data-todo="LinkedIn">LinkedIn</a></li></ul>
+<div><h4>Say hello</h4><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="#" data-todo="Instagram">Instagram</a></li><li><a href="#" data-todo="YouTube">YouTube</a></li><li><a href="#" data-todo="LinkedIn">LinkedIn</a></li><li><a href="#" data-todo="Facebook">Facebook</a></li></ul>
 <p class="mt"><button class="bell" id="bell" type="button">{BELL} Ring the bell</button></p></div>
 </div>
 <div class="fine"><span>© <span id="yr">2026</span> Mahatma Alumni Association. Independent and run by alumni.</span><span>Made with chalk dust and nostalgia. <a href="game.html">Late for school?</a></span></div>
@@ -365,6 +365,16 @@ h+=f'''
 <article class="note-card rv"><div class="n">02</div><h3>Launch</h3><p>The MAA app and the programmes you can join. The network gets a place to live after the day ends.</p></article>
 <article class="note-card rv"><div class="n">03</div><h3>Commit</h3><p>Sign-ups for mentors, speakers, employers and sponsors. Goodwill becomes a name on a list, with a date next to it.</p></article></div></div></section>
 
+<section class="hands-sec" id="app"><div class="wrap"><div class="head"><div><p class="eyebrow">Launching on 27 December</p><h2>The MAA app</h2></div><p>Homecoming is one day. The app is where the family keeps meeting after it. Here is what it is being built to do.</p></div>
+<div class="hands">
+<div class="hand-item rv"><h3><small>01</small>Find your batch</h3><p>A directory of alumni, by batch, school, city and field.</p></div>
+<div class="hand-item rv"><h3><small>02</small>Say you are coming</h3><p>RSVP to events and carry your pass on your phone.</p></div>
+<div class="hand-item rv"><h3><small>03</small>Your city, your group</h3><p>Groups for alumni in the same city or country, at home and abroad.</p></div>
+<div class="hand-item rv"><h3><small>04</small>Ask a mentor</h3><p>Mentorship conversations, matched by field and goals.</p></div>
+<div class="hand-item rv"><h3><small>05</small>Lend a hand</h3><p>Volunteer openings, from a school visit to a CSR project.</p></div>
+<div class="hand-item rv"><h3><small>06</small>Hear it first</h3><p>News from the councils and your batch representative.</p></div></div>
+<p class="mt2 center hand">Only verified alumni get in. Download links arrive on Homecoming day.</p></div></section>
+
 <section class="feature" id="timetable"><div class="wrap"><div class="head"><div><p class="eyebrow">Your timetable</p><h2>Three days, three periods</h2></div><p>Come to one or come to all.</p></div>
 <div class="tt-wrap"><table class="tt"><thead><tr><th>Day</th><th>What happens</th><th>Good to know</th></tr></thead><tbody>
 <tr><td>Fri 25 Dec</td><td><span class="tag">School Visit Day</span>Walk your old corridors. Games, classrooms, photos, family.</td><td>10 am to 4 pm · free · lunch provided · alumni and family</td></tr>
@@ -384,6 +394,8 @@ h+=f'''
 <details><summary>What happens on the day?</summary><p>The programme, a panel, a networking session, lunch for all attendees and the launch of the MAA app.</p></details>
 <details><summary>What are the School Visit Days?</summary><p>Free visits to the school from 10 am to 4 pm, with lunch provided, for alumni and family. Sign up through the visit form (link coming soon).</p></details>
 <details><summary>Can I bring my family?</summary><p>Yes, to the School Visit Days. Please mention the number in the visit form.</p></details>
+<details><summary>What is the MAA app?</summary><p>The alumni network on your phone: find batchmates, RSVP to events, join your city group, find a mentor and hear the news first. It launches at Homecoming on 27 December, and only verified alumni can sign in. <a href="#app">See what it does</a>.</p></details>
+<details><summary>Can I volunteer at Homecoming?</summary><p>Yes. We need hands at the gate, on the stage and around the campus. Tick "Homecoming volunteer" on the <a href="join.html#raise">Join page</a>.</p></details>
 <details><summary>Do I have to join any programme?</summary><p>No. Every programme is optional. You choose how much time to give.</p></details>
 <details><summary>Who do I contact?</summary><p>Write to <a href="mailto:{MAIL}">{MAIL}</a>.</p></details></div></div></section>
 {HAND}
@@ -414,10 +426,10 @@ h+=f'''
 <div class="step rv"><div><h3>Register for Homecoming</h3><p>Sunday, 27 December 2026. ₹1,299 + GST.</p></div><a class="btn solid" href="{REG}">Register {ARW}</a></div>
 <div class="step rv"><div><h3>Sign up for School Visit Days</h3><p>25 and 26 December, 10 am to 4 pm. Free, with lunch, for alumni and family.</p></div><a class="btn line" href="#" data-todo="School Visit sign-up form">Sign up {ARW}</a></div>
 <div class="step rv"><div><h3>Put your hand up</h3><p>Mentor, speak, hire, guest, organise or support. Tell us below.</p></div><a class="btn line" href="#raise">Choose {ARW}</a></div>
-<div class="step rv"><div><h3>Find your batch</h3><p>Tell your batchmates. Ask for your batch representative.</p></div><a class="btn line" href="mailto:{MAIL}?subject=Find%20my%20batch">Ask us {ARW}</a></div></div></div></section>
+<div class="step rv"><div><h3>Find your batch</h3><p>Tell your batchmates. Ask for your batch representative, or offer to be one.</p></div><a class="btn line" href="mailto:{MAIL}?subject=Find%20my%20batch">Ask us {ARW}</a></div></div></div></section>
 
 <section class="feature" id="raise"><div class="wrap grid2h">
-<div><p class="eyebrow">Raise your hand</p><h2 class="mt">What would you like to do?</h2><p class="mt">Pick as many as you like. We will write back to you after Homecoming with next steps.</p></div>
+<div><p class="eyebrow">Raise your hand</p><h2 class="mt">What would you like to do?</h2><p class="mt">Pick as many as you like. We will write back to you after Homecoming with next steps.</p><p class="mt">Have an idea of your own? A group for alumni in your city, a project for the school, a cause close to your batch? Tick the last box and tell us about it.</p></div>
 <form class="mailform" data-to="{MAIL}" data-subject="I would like to help">
 <label>Your name<input name="name" required></label>
 <label>Batch and city<input name="batch" placeholder="e.g. 2008, Chennai"></label>
@@ -427,7 +439,10 @@ h+=f'''
 <label class="ck"><input type="checkbox" name="role" value="Employer (internships or jobs)"> Employer</label>
 <label class="ck"><input type="checkbox" name="role" value="Vodcast guest or volunteer"> Guest or guide</label>
 <label class="ck"><input type="checkbox" name="role" value="Organiser (inter-school competition)"> Organiser</label>
-<label class="ck"><input type="checkbox" name="role" value="Supporter or sponsor"> Supporter</label></fieldset>
+<label class="ck"><input type="checkbox" name="role" value="Supporter or sponsor"> Supporter</label>
+<label class="ck"><input type="checkbox" name="role" value="Homecoming volunteer"> Homecoming volunteer</label>
+<label class="ck"><input type="checkbox" name="role" value="Batch representative"> Batch representative</label>
+<label class="ck"><input type="checkbox" name="role" value="Starting a city group or project"> Start a city group or project</label></fieldset>
 <label>Anything else?<textarea name="msg" rows="3"></textarea></label>
 <button class="btn solid" type="submit">Send my hand-raise {ARW}</button><p class="fine2">This opens your email app with your note ready to send.</p></form></div></section>
 '''+foot()
