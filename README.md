@@ -16,7 +16,8 @@ Needed: Ma'am portrait, Ma'am with children, timeline photos (5), six "memory la
 Content lives in `build.py`. Edit it and run `python3 build.py` to regenerate all pages. Or edit the `.html` files directly.
 
 ## Fill in before going live
-- Link placeholders (`data-todo`): YouTube webinar link, Instagram, YouTube channel, WhatsApp.
+- Link placeholders (`data-todo`): YouTube webinar link, Instagram, YouTube channel, LinkedIn, Facebook, WhatsApp.
+- MAA app features on the Homecoming page (draft: confirm with the app team).
 - Vision and mission wording (draft).
 - Kurals in `assets/js/main.js`: have a Tamil teacher confirm text and meanings.
 - Team names and titles (Arun Kesav's title, council, committees, batch reps).
